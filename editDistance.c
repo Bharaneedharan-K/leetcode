@@ -1,3 +1,4 @@
+//Leetcode 72
 int min(int x, int y, int z){
     if(x<y && x<z){
         return x;
@@ -24,6 +25,7 @@ int minDistance(char* s1, char* s2){
                 dp[i][j] = dp[i-1][j-1];
             }else{
                 dp[i][j] = 1 + min(dp[i][j-1], dp[i-1][j], dp[i-1][j-1]);
+
             }
         }
     }
